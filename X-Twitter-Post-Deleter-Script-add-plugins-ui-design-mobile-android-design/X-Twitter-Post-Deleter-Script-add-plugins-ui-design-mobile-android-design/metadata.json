@@ -1,0 +1,5 @@
+{
+  "name": "Copy of X (Twitter) Post Deleter Script",
+  "description": "A web app that provides a script to safely and automatically delete all your posts on X (formerly Twitter), mimicking human behavior to avoid detection.",
+  "requestFramePermissions": []
+}
