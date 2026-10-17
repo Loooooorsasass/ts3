@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEMPLATE: panel = hard drop shadow + gradient body with edge + inner highlight stroke.
+  Add the content padding in the layout/style (Widget.Game.Panel uses 16dp).
+  Inner stroke insets: 5dp (edge 2dp + 3dp gap) on left/top/right; bottom = 5dp + shadow offset (4dp).
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item android:top="@dimen/game_panel_shadow_offset">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/game_panel_shadow" />
+            <corners android:radius="@dimen/game_panel_radius" />
+        </shape>
+    </item>
+    <!-- Body -->
+    <item android:bottom="@dimen/game_panel_shadow_offset">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/game_panel_top"
+                android:endColor="@color/game_panel_bottom" />
+            <stroke
+                android:width="@dimen/game_panel_edge"
+                android:color="@color/game_panel_edge" />
+            <corners android:radius="@dimen/game_panel_radius" />
+        </shape>
+    </item>
+    <!-- Inner highlight stroke -->
+    <item
+        android:left="5dp"
+        android:top="5dp"
+        android:right="5dp"
+        android:bottom="9dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/game_panel_inner_stroke" />
+            <corners android:radius="19dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEMPLATE styles. Parent assumes AppCompat. With a Material Components theme a plain <Button>
+  inflates to MaterialButton, which draws its own background — use GameButtonView (extends
+  AppCompatButton) or a custom class so android:background is honored.
+  Material themes also set a default backgroundTint through ?attr/buttonStyle. AppCompatButton
+  would apply that tint on top of the layer-list drawable and wash out the colors, so this style
+  clears it explicitly (the backgroundTint items below). Keep them.
+  paddingBottom = 10dp + lip depth (5dp) so the label sits centered on the face.
+-->
+<resources>
+    <style name="Widget.Game.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_game_button</item>
+        <!-- Clear the tint that a Material buttonStyle would otherwise apply to the background. -->
+        <item name="backgroundTint">@null</item>
+        <item name="backgroundTintMode">@null</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">@color/game_button_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">@dimen/game_button_min_height</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <!-- Set android:fontFamily to a bundled font after verifying license and language coverage. -->
+    </style>
+
+    <style name="Widget.Game.Panel">
+        <item name="android:background">@drawable/bg_game_panel</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="TextAppearance.Game.Title">
+        <item name="android:textColor">@color/game_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

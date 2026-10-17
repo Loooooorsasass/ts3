@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEMPLATE usage sketch. Change the custom view package to where you place the Java files.
+  Strings come from resources (see game_template_strings.xml) — no hard-coded player-facing text.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/Widget.Game.Panel">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/game_template_title"
+        android:textAppearance="@style/TextAppearance.Game.Title" />
+
+    <LinearLayout
+        android:id="@+id/health_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/health_warning"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/game_bar_low"
+            android:textStyle="bold"
+            android:contentDescription="@string/game_template_health_warning"
+            android:visibility="gone" />
+
+        <com.example.game.ui.template.views.SegmentedBarView
+            android:id="@+id/health_bar"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/game_template_health_label" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/TextAppearance.Game.Title" />
+
+    <com.example.game.ui.template.views.GameButtonView
+        android:id="@+id/continue_button"
+        style="@style/Widget.Game.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="@string/game_template_play" />
+</LinearLayout>
