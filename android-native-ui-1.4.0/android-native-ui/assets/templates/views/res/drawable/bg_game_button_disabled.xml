@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TEMPLATE: disabled state. Same shape, desaturated colors, no highlight. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/game_button_depth">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/game_disabled_lip" />
+            <corners android:radius="@dimen/game_button_radius" />
+        </shape>
+    </item>
+    <item android:bottom="@dimen/game_button_depth">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/game_disabled_face_top"
+                android:endColor="@color/game_disabled_face_bottom" />
+            <stroke
+                android:width="@dimen/game_button_edge"
+                android:color="@color/game_disabled_edge" />
+            <corners android:radius="@dimen/game_button_radius" />
+        </shape>
+    </item>
+</layer-list>

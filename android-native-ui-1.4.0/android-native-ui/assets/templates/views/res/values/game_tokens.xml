@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEMPLATE tokens (Candy Cartoon example from references/10-style-presets.md).
+  Map these onto the project's existing colors/dimens (or rename/merge) — do not keep duplicates.
+  Prefer semantic names. Values here are placeholders.
+-->
+<resources>
+    <!-- Primary button -->
+    <color name="game_primary_face_top">#FFC94A</color>
+    <color name="game_primary_face_bottom">#FF9F1C</color>
+    <color name="game_primary_edge">#A85A00</color>
+    <color name="game_primary_lip">#7A3F00</color>
+    <color name="game_primary_highlight">#99FFFFFF</color>
+    <color name="game_on_primary">#3A1F00</color>
+
+    <!-- Disabled button -->
+    <color name="game_disabled_face_top">#B8B5BE</color>
+    <color name="game_disabled_face_bottom">#AAA6AF</color>
+    <color name="game_disabled_edge">#5B5861</color>
+    <color name="game_disabled_lip">#46444B</color>
+    <color name="game_on_disabled">#211D24</color>
+
+    <!-- Panel -->
+    <color name="game_panel_top">#3F4391</color>
+    <color name="game_panel_bottom">#34377C</color>
+    <color name="game_panel_edge">#1B1D4A</color>
+    <color name="game_panel_shadow">#66120F33</color>
+    <color name="game_panel_inner_stroke">#33FFFFFF</color>
+
+    <!-- Segmented bar (health example) -->
+    <color name="game_bar_track">#1B1D4A</color>
+    <color name="game_bar_trail">#FFE7A3</color>
+    <color name="game_bar_fill">#5CD65C</color>
+    <color name="game_bar_low">#FF5468</color>
+
+    <!-- Text -->
+    <color name="game_text">#FFFFFF</color>
+
+    <!-- Metrics -->
+    <dimen name="game_button_depth">5dp</dimen>
+    <dimen name="game_button_press_shift">4dp</dimen>
+    <dimen name="game_button_depth_remaining">1dp</dimen><!-- depth - press_shift -->
+    <dimen name="game_button_radius">16dp</dimen>
+    <dimen name="game_button_edge">2dp</dimen>
+    <dimen name="game_button_min_height">61dp</dimen><!-- 56dp face + 5dp lip -->
+    <dimen name="game_panel_radius">22dp</dimen>
+    <dimen name="game_panel_edge">2dp</dimen>
+    <dimen name="game_panel_shadow_offset">4dp</dimen>
+</resources>

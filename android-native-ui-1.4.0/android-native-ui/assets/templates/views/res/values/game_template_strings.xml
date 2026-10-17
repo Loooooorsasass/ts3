@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sample strings for template_example.xml only. Delete or replace with the project's strings. -->
+<resources>
+    <string name="game_template_title">Result</string>
+    <string name="game_template_play">Continue</string>
+    <string name="game_template_health_label">Health</string>
+    <string name="game_template_health_warning">Low health warning</string>
+    <string name="game_template_health_normal_state">Normal health</string>
+    <string name="game_template_health_low_state">Low health</string>
+</resources>

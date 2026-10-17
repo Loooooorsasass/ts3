@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEMPLATE: normal state. Layers (bottom -> top): lip, face (gradient + edge), highlight.
+  The highlight item uses android:height, which requires API 23+. If minSdk < 23,
+  delete the highlight item (otherwise it would stretch on older versions).
+  For secondary/danger variants, copy this file with different color tokens.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Lip -->
+    <item android:top="@dimen/game_button_depth">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/game_primary_lip" />
+            <corners android:radius="@dimen/game_button_radius" />
+        </shape>
+    </item>
+    <!-- Face -->
+    <item android:bottom="@dimen/game_button_depth">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/game_primary_face_top"
+                android:endColor="@color/game_primary_face_bottom" />
+            <stroke
+                android:width="@dimen/game_button_edge"
+                android:color="@color/game_primary_edge" />
+            <corners android:radius="@dimen/game_button_radius" />
+        </shape>
+    </item>
+    <!-- Highlight (API 23+) -->
+    <item
+        android:left="14dp"
+        android:top="5dp"
+        android:right="14dp"
+        android:height="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/game_primary_highlight" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+</layer-list>
